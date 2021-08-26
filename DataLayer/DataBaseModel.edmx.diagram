@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b356951a77e040c8927788172412dc73" Name="Diagram1">
+        <EntityTypeShape EntityType="ProyectoDCUModel.Category" Width="1.5" PointX="0.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoDCUModel.Doctor" Width="1.5" PointX="5.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoDCUModel.Hospital" Width="1.5" PointX="7.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoDCUModel.Specialty" Width="1.5" PointX="2.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoDCUModel.Symptom" Width="1.5" PointX="2.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoDCUModel.sysdiagram" Width="1.5" PointX="13.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoDCUModel.User" Width="1.5" PointX="11" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="ProyectoDCUModel.FK_Specialties_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoDCUModel.FK_Symptoms_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoDCUModel.FK_Doctors_Hospital" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoDCUModel.FK_Doctors_Specialties" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

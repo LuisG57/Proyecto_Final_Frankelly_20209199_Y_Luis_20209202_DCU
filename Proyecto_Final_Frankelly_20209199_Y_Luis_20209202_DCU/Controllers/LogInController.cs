@@ -3,15 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using EntityLayer;
+using ServicesLayer;
 
 namespace Proyecto_Final_Frankelly_20209199_Y_Luis_20209202_DCU.Controllers
 {
     public class LogInController : Controller
     {
+        private UserDataService _userdata = new UserDataService();
         // GET: LogIn
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult UserVerification(string Email, string Password)
+        {
+            var ValidCredentials = false;
+            var users = _userdata.GetUsers();
+            foreach(var user in users)
+            {
+                if (user.Email.ToUpper().Equals(Email.ToUpper()) && user.Password.Equals(Password)) ValidCredentials = true;
+            }
+            return ValidCredentials ? RedirectToAction("details") : RedirectToAction("index");
         }
 
         // GET: LogIn/Details/5
