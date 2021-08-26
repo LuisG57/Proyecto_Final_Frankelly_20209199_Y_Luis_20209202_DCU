@@ -1,0 +1,78 @@
+﻿body {
+    background-image: url('../Images/Rectangle 1.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size:18px;
+}
+
+.header {
+    color: red;
+}
+
+.center {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#loginForm {
+    top: 0px;
+    left: -80px;
+    position: relative;
+}
+
+#image {
+    position: absolute;
+}
+/*.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+*/
+.text-field {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-bottom: 1px solid rgb(112 112 112 / 0.50);
+    text-align: center;
+    height: 30px;
+    width: 250px;
+    /*border-color: blue;*/
+}
+
+    .text-field:focus {
+        border-color: rgb(75 5 252 / 0.68);
+    }
+
+
+
+.loginbutton {
+    height: 50px;
+    width: 250px;
+    border: none;
+    background-image: linear-gradient(to right,rgb(67 0 255 / 0.60) 0%, #FB71BF 50%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 40px;
+    display: block;
+}
+
+
+.poslogin {
+    position: static;
+    top: -50px;
+    left: 50px;
+}
+#logoimage {
+    position: static;
+    /*margin-top: -250px;*/
+}
