@@ -28,13 +28,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Health Book", "PageIndex", "web", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse @ViewBag.TopBar colorfortop">
-                <ul class="nav navbar-nav">
-                    <li class="colorfortop">@Html.ActionLink("Home", "Index", "Home", new { @class= "colorfortop" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <ul class="nav navbar-nav pull-right" >
+                    <li>@Html.ActionLink("Inicio", "PageIndex", "web")</li>
+                    <li class="pull-right">@Html.ActionLink("Cerrar Sesion", "Index", "LogIn",null,new { @class= "pull-right" })</li>
+                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                 </ul>
             </div>
         </div>

@@ -19,12 +19,20 @@ namespace Proyecto_Final_Frankelly_20209199_Y_Luis_20209202_DCU.Controllers
         }
 
         // GET: Web/Details/5
-        public ActionResult PageIndex(int id)
+        public ActionResult PageIndex(int? id)
         {
-            var activeuser = _userdata.GetUser(id);
-            var model = new WebDTO();
-            model.activeUser = activeuser;
-            return View(model);
+            if (id == null)
+            {
+                return View();
+            }
+            else
+            {
+                var iid = (int)id;
+                var activeuser = _userdata.GetUser(iid);
+                var model = new WebDTO();
+                model.activeUser = activeuser;
+                return View(model);
+            }
         }
         public ActionResult Details(int id)
         {
@@ -54,6 +62,27 @@ namespace Proyecto_Final_Frankelly_20209199_Y_Luis_20209202_DCU.Controllers
         {
             var users = _userdata.GetUsers();
             return View(users);
+        }
+        //***********************------------------------------------************
+         public ActionResult dlcresults()
+        {
+            return View();
+        }
+         public ActionResult sedresults()
+        {
+            return View();
+        }
+         public ActionResult dlpresults()
+        {
+            return View();
+        }
+         public ActionResult decresults()
+        {
+            return View();
+        }
+         public ActionResult vibresults()
+        {
+            return View();
         }
 
         // GET: Web/Create

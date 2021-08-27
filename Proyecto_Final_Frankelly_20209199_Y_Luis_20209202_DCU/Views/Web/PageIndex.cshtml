@@ -4,32 +4,45 @@
     ViewBag.Title = "Health Book";
 }
 
-<h2 class="text-center">Bienvenid&#64; @Model.activeUser.Name, como te sientes hoy?</h2>
+@{
+    string mensaje = null;
+    if (Model == null)
+    {
+        <h2 class="text-center">Saludos, como te sientes hoy?</h2>
+    }
+    else
+    {
+        mensaje = Model.activeUser.Sexo.ToUpper().Equals("M") ? "Bienvenido" : "Bienvenida";
+        <h2 class="text-center">@mensaje @Model.activeUser.Name, como te sientes hoy?</h2>
+    }
+}
+
+
 <hr />
 <style>
-    .foregroundsize{
+    .foregroundsize {
         font-size: 20px;
     }
 </style>
 <div class="foregroundsize">
-    <a href="/web/dlc" class="text-center btn btn-info btn-block foregroundsize">Me duele la cabeza</a>
+    <a href="/web/dlc" class="text-center btn btn-primary btn-block foregroundsize">Me duele la cabeza</a>
     <hr />
-    <a href="/web/sed" class="text-center btn btn-info btn-block foregroundsize">Sed excesiva</a>
+    <a href="/web/sed" class="text-center btn btn-primary btn-block foregroundsize">Sed excesiva</a>
     <hr />
-    <a href="/web/dlp" class="text-center btn btn-info btn-block foregroundsize">Dolor pelvico</a>
+    <a href="/web/dlp" class="text-center btn btn-primary btn-block foregroundsize">Dolor pelvico</a>
     <hr />
-    <a href="/web/dec" class="text-center btn btn-info btn-block foregroundsize">Decaimiento</a>
+    <a href="/web/dec" class="text-center btn btn-primary btn-block foregroundsize">Decaimiento</a>
     <hr />
-    <a href="/web/vib" class="text-center btn btn-info btn-block foregroundsize">Vision borrosa</a>
+    <a href="/web/vib" class="text-center btn btn-primary btn-block foregroundsize">Vision borrosa</a>
     <hr />
 </div>
 @*
-hacer una sumatoria de los valores que nesitamos para irlos acumulando en un acumulador donde podrsmos erterminar la categoia del problema del usuario.    
-    dolor de cabeza
-    vision borrosa
-    decaimiento
-    dolor pelvico
-    dolor en el oido
-    --*
+    hacer una sumatoria de los valores que nesitamos para irlos acumulando en un acumulador donde podrsmos erterminar la categoia del problema del usuario.
+        dolor de cabeza
+        vision borrosa
+        decaimiento
+        dolor pelvico
+        dolor en el oido
+        --*
 
 *@

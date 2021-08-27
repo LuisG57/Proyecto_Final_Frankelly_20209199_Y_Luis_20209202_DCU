@@ -144,8 +144,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Diabetes.jpg" />
+    <Content Include="Images\Falla_Renal.jpg" />
     <Content Include="Images\Group 10.png" />
     <Content Include="Images\Group 11.png" />
+    <Content Include="Images\infeccion-urinaria.png" />
+    <Content Include="Images\PresionAlta.jpg" />
+    <Content Include="Images\Presion_Baja.jpg" />
     <Content Include="Images\Rectangle 1.png" />
     <Content Include="Images\Rectangle 2.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -184,6 +189,11 @@
     <Content Include="Views\Web\dlp.cshtml" />
     <Content Include="Views\Web\dec.cshtml" />
     <Content Include="Views\Web\vib.cshtml" />
+    <Content Include="Views\Web\dlcresults.cshtml" />
+    <Content Include="Views\Web\sedresults.cshtml" />
+    <Content Include="Views\Web\dlpresults.cshtml" />
+    <Content Include="Views\Web\decresults.cshtml" />
+    <Content Include="Views\Web\vibresults.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
