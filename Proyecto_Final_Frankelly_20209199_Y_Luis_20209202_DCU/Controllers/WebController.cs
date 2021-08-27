@@ -9,47 +9,39 @@ using ServicesLayer;
 
 namespace Proyecto_Final_Frankelly_20209199_Y_Luis_20209202_DCU.Controllers
 {
-    public class LogInController : Controller
+    public class WebController : Controller
     {
         private UserDataService _userdata = new UserDataService();
-        // GET: LogIn
+        // GET: Web
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult UserVerification(string Email, string Password)
+        // GET: Web/Details/5
+        public ActionResult PageIndex(int id)
         {
-            var ValidCredentials = false;
-            var user = new User();
-            user.Email = Email;
-            user.Password = Password;
-            user = _userdata.GetUserLogIn(user);
-            //if (user!=null) ValidCredentials=true;
-            _ = user != null ? ValidCredentials = true : ValidCredentials=false;
-            if (ValidCredentials == true)
-            {
-                return RedirectToAction("PageIndex", "web", new { id = user.Id });
-            }
-            else
-            {
-                return RedirectToAction("index");
-            }
+            var activeuser = _userdata.GetUser(id);
+            var model = new WebDTO();
+            model.activeUser = activeuser;
+            return View(model);
         }
-
-        // GET: LogIn/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
+        public ActionResult dlc()
+        {
+            return View();
+        }
 
-        // GET: LogIn/Create
+        // GET: Web/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: LogIn/Create
+        // POST: Web/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -65,13 +57,13 @@ namespace Proyecto_Final_Frankelly_20209199_Y_Luis_20209202_DCU.Controllers
             }
         }
 
-        // GET: LogIn/Edit/5
+        // GET: Web/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: LogIn/Edit/5
+        // POST: Web/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -87,13 +79,13 @@ namespace Proyecto_Final_Frankelly_20209199_Y_Luis_20209202_DCU.Controllers
             }
         }
 
-        // GET: LogIn/Delete/5
+        // GET: Web/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: LogIn/Delete/5
+        // POST: Web/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

@@ -4,23 +4,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    @*<link rel="stylesheet" type="text/css" href="~/Styles/Styles.css" />*@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top invisible">
+    <style>
+        .bgcolorgradient {
+            /*background-image: linear-gradient(to right,rgb(67 0 255 / 0.60) 0%, #FB71BF 50%);*/
+            /*background-color: black;*/
+            /*background-size: 200% auto;*/
+        }
+        .colorfortop{
+            /*text-decoration: white;*/
+            color: blue;
+        }
+    </style>
+    <div class="navbar navbar-inverse navbar-fixed-top @ViewBag.TopBar bgcolorgradient">
         <div class="container">
-            <div class="navbar-header invisible">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <div class="navbar-header @ViewBag.TopBar">
+                <button type="button" class="navbar-toggle " data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse invisible">
+            <div class="navbar-collapse collapse @ViewBag.TopBar colorfortop">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="colorfortop">@Html.ActionLink("Home", "Index", "Home", new { @class= "colorfortop" })</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>

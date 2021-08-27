@@ -16,7 +16,7 @@ namespace Proyecto_Final_Frankelly_20209199_Y_Luis_20209202_DCU
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "LogIn", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

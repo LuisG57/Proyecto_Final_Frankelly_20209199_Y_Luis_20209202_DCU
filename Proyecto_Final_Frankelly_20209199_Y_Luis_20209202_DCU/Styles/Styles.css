@@ -48,6 +48,10 @@
     }
 
 
+.bgcolorgradient {
+    background-image: linear-gradient(to right,rgb(67 0 255 / 0.60) 0%, #FB71BF 50%);
+    /*background-size: 200% auto;*/
+}
 
 .loginbutton {
     height: 50px;

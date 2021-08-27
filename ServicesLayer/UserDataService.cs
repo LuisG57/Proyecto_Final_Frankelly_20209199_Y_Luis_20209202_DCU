@@ -17,8 +17,11 @@ namespace ServicesLayer
         }
         public User GetUser(int Id)
         {
-            
             return _userData.GetUser(Id);
+        }
+        public User GetUserLogIn(User user)
+        {
+            return _userData.GetUserLogIn(user);
         }
         public List<User> GetUsers()
         {

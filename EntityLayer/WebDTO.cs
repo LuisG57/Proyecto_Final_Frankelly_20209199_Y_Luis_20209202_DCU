@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace EntityLayer
 {
-    public class Class1
+    public class WebDTO
     {
+        public User activeUser { get; set; }
     }
 }

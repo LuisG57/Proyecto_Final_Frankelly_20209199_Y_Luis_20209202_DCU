@@ -1,10 +1,12 @@
 ﻿<link rel="stylesheet" type="text/css" href="~/Styles/Styles.css" />
-<body>
+<body class="bodylogin">
     @{
         ViewBag.Title = "Index";
+        ViewBag.TopBar = "invisible";
     }
 
     @*<h2>Iniciar Sesion</h2>*@
+
 
 
     <div class="container" align="center">
@@ -17,9 +19,9 @@
                 <br />
                 <br />
                 <img src="~/Images/Group 10.png">
-                <br />  
-                <br />  
-                <br />  
+                <br />
+                <br />
+                <br />
             </div>
             <form action="/LogIn/UserVerification" class="">
                 <input type="text" placeholder="Correo Electrónico" name="Email" class="text-field" />

@@ -24,6 +24,11 @@ namespace DataLayer
             var users = generalContext.Users.Find(Id);
             return users;
         }
+        public User GetUserLogIn(User user)
+        {
+            var users = generalContext.Users.Where(u=>u.Email == user.Email).Where(u=>u.Password==user.Password).ToList().First();
+            return users;
+        }
         public List<User> GetUsers()
         {
             var users = generalContext.Users.ToList();

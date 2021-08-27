@@ -1,0 +1,28 @@
+﻿@model EntityLayer.WebDTO
+
+@{
+    ViewBag.Title = "Health Book";
+}
+
+<h2 class="text-center">Bienvenid&#64; @Model.activeUser.Name, como te sientes hoy?</h2>
+<hr />
+<a href="/web/dlc" class="text-center btn btn-info btn-block">Me duele la cabeza</a>
+<hr />
+<a href="" class="text-center btn btn-info btn-block">Me duele el estomago</a>
+<hr />
+<a href="" class="text-center btn btn-info btn-block">Respiro con dificultad</a>
+<hr />
+<a href="" class="text-center btn btn-info btn-block">Me siento decaido</a>
+<hr />
+<a href="" class="text-center btn btn-info btn-block">Tengo dificultad al orinar</a>
+<hr />
+@*
+hacer una sumatoria de los valores que nesitamos para irlos acumulando en un acumulador donde podrsmos erterminar la categoia del problema del usuario.    
+    dolor de cabeza
+    vision borrosa
+    decaimiento
+    dolor pelvico
+    dolor en el oido
+    --*
+
+*@
