@@ -32,7 +32,28 @@ namespace Proyecto_Final_Frankelly_20209199_Y_Luis_20209202_DCU.Controllers
         }
         public ActionResult dlc()
         {
-            return View();
+            var users = _userdata.GetUsers();
+            return View(users);
+        }
+         public ActionResult sed()
+        {
+            var users = _userdata.GetUsers();
+            return View(users);
+        }
+         public ActionResult dlp()
+        {
+            var users = _userdata.GetUsers();
+            return View(users);
+        }
+         public ActionResult dec()
+        {
+            var users = _userdata.GetUsers();
+            return View(users);
+        }
+         public ActionResult vib()
+        {
+            var users = _userdata.GetUsers();
+            return View(users);
         }
 
         // GET: Web/Create

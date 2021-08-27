@@ -1,0 +1,74 @@
+﻿@model IEnumerable<EntityLayer.User>
+
+@{
+    ViewBag.Title = "Dolor de cabeza";
+
+
+}
+<hr />
+<h2 class="text-center">Dolor de cabeza</h2>
+<hr />
+<br />
+<h3 class="text-center">Por favor responde a las siguientes preguntas</h3>
+<br />
+<br />
+<table class="table">
+    <tr>
+        <th>
+            Pregunta
+        </th>
+        <th>
+            No
+        </th>
+        <th>
+            Casi nada
+        </th>
+        <th>
+            Mas o menos
+        </th>
+        <th>
+            Si
+        </th>
+        <th>
+            Mucho
+        </th>
+    </tr>
+    @{            
+        
+        string[] preguntas = new string[] { "Zumbido en los oidos", "Vision borrosa", "Dificultad al pensar", "Impasiencia", "Latidos acelerados" };
+
+    }
+
+    @for (int i = 0; i < 5; i++)
+    {
+        <tr>
+            <td>
+                <label>@preguntas[i]</label>
+            <td>
+                <input type="radio" name="@i" />
+                <label>&nbsp; 1</label>
+            </td>
+            <td>
+                <input type="radio" name="@i" />
+                <label>&nbsp; 2</label>
+            </td>
+            <td>
+                <input type="radio" name="@i" />
+                <label>&nbsp; 3</label>
+            </td>
+            <td>
+                <input type="radio" name="@i" />
+                <label>&nbsp; 4</label>
+            </td>
+            <td>
+                <input type="radio" name="@i" />
+                <label>&nbsp; 5</label>
+            </td>
+        </tr>
+
+    }
+</table>
+<br />
+<hr />
+@Html.ActionLink("Continuar", "dlc", null, new { @class = "btn btn-info btn-block" })
+<hr />
